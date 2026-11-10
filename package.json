@@ -1,0 +1,19 @@
+{
+  "name": "ruturaj-silicon-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide": "^0.453.0",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.16.0",
+    "vite": "^5.4.9"
+  }
+}

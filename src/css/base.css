@@ -1,0 +1,150 @@
+/* ==========================================================================
+   RV / SILICON INTERFACE — BASE DESIGN SYSTEM
+   Ruturaj Vyavahare — Aspiring VLSI Design Engineer
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Color Palette — Semiconductor Precision */
+  --bg-deep: #080808;
+  --bg-surface: #101012;
+  --bg-panel: #141416;
+  --bg-panel-elevated: #1a1a1e;
+  --bg-code: #0b0b0d;
+
+  /* Accent Colors */
+  --accent-orange: #FF4B1F;
+  --accent-orange-glow: rgba(255, 75, 31, 0.28);
+  --accent-orange-dim: rgba(255, 75, 31, 0.12);
+  --accent-orange-bright: #FF6738;
+
+  --accent-cyan: #00D9FF;
+  --accent-cyan-glow: rgba(0, 217, 255, 0.28);
+  --accent-cyan-dim: rgba(0, 217, 255, 0.12);
+
+  /* Neutrals & Monochromes */
+  --text-primary: #F4F1EB;
+  --text-secondary: #9E9E9E;
+  --text-muted: #666666;
+  --text-dark: #333333;
+
+  /* Borders & Hairlines */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-active: rgba(255, 75, 31, 0.6);
+  --border-cyan: rgba(0, 217, 255, 0.5);
+
+  /* Typography */
+  --font-display: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout Spacing */
+  --container-max: 1400px;
+  --gutter: 2rem;
+  --section-spacing: 7rem;
+
+  /* Motion Timing */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 480ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Background Silicon Grid Texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Selection Highlight */
+::selection {
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+/* Monospace & Code */
+code, pre, kbd, samp, .font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: 'zero' 1, 'calt' 1;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+/* Buttons Reset */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Images */
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: #222226;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-orange);
+}
+

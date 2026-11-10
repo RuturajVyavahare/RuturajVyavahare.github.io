@@ -1,0 +1,189 @@
+/* ==========================================================================
+   RV / SILICON INTERFACE — RESPONSIVE ADAPTATIONS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Large Desktops & Laptops (max-width: 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  :root {
+    --gutter: 1.5rem;
+    --section-spacing: 5.5rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+  }
+
+  .workflow-pipeline {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .workflow-pipeline::before {
+    display: none;
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets (max-width: 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .nav-menu, .btn-command-palette {
+    display: none;
+  }
+
+  .btn-mobile-toggle {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: left;
+  }
+
+  .hero-portrait-frame {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .project-inner-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.75rem;
+  }
+
+  .signal-lab-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-hero-wrap {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Devices (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --gutter: 1rem;
+    --section-spacing: 4rem;
+  }
+
+  .site-header {
+    height: 64px;
+  }
+
+  .hero-section {
+    padding-top: 88px;
+    padding-bottom: 3rem;
+  }
+
+  .hero-headline {
+    font-size: 2.6rem;
+  }
+
+  .hero-portrait-frame {
+    max-width: 340px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary-orange, .btn-wire-cyan {
+    justify-content: center;
+  }
+
+  .section-meta-header {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-desc-spec {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 0.75rem;
+  }
+
+  .spec-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .alu-controls-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .opcode-select-wrap {
+    grid-column: span 1;
+  }
+
+  .opcode-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lock-keypad-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .channel-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .btn-copy-email {
+    width: 100%;
+    text-align: center;
+  }
+}
+
